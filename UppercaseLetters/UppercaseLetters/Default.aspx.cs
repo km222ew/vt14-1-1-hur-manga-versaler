@@ -13,5 +13,32 @@ namespace UppercaseLetters
         {
 
         }
+
+        protected void Submit_Click(object sender, EventArgs e)
+        {
+            if (Submit.Text == "Rensa")
+            {
+                Input.Text = "";
+                Input.Enabled = true;
+                Result.Visible = false;
+                Submit.Text = "Bestäm antalet versaler";
+            }
+            else
+            {
+                var input = Input.Text;
+
+                var capitals = Model.TextAnalyzer.GetNumberOfCapitals(input);
+
+                Input.Enabled = false;
+
+                Result.Text = "Texten innehåller " + capitals + " versaler";
+
+                Submit.Text = "Rensa";
+
+                Result.Visible = true;
+            }
+            
+            
+        }
     }
 }

@@ -12,7 +12,11 @@
 
         <asp:TextBox ID="Input" runat="server" TextMode="MultiLine"></asp:TextBox>
 
-        <asp:Button ID="Submit" runat="server" Text="Bestäm antalet versaler" />
+        <asp:Label ID="Result" runat="server" Text="Label" Visible="False"></asp:Label>
+
+        <asp:Button ID="Submit" runat="server" Text="Bestäm antalet versaler" OnClick="Submit_Click" />
+
+
 
     </div>
     </form>
