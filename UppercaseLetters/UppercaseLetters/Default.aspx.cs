@@ -16,6 +16,7 @@ namespace UppercaseLetters
 
         protected void Submit_Click(object sender, EventArgs e)
         {
+            //Kollar om knappen har texten "rensa" som endast tilldelas när en sträng har kollats
             if (Submit.Text == "Rensa")
             {
                 Input.Text = "";
@@ -23,6 +24,7 @@ namespace UppercaseLetters
                 Result.Visible = false;
                 Submit.Text = "Bestäm antalet versaler";
             }
+            //Annars kollas strängen efter versaler
             else
             {
                 var input = Input.Text;
@@ -36,9 +38,7 @@ namespace UppercaseLetters
                 Submit.Text = "Rensa";
 
                 Result.Visible = true;
-            }
-            
-            
+            }                       
         }
     }
 }

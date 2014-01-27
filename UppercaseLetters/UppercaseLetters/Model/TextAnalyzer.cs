@@ -11,6 +11,7 @@ namespace UppercaseLetters.Model
         {
             int capitals = 0;
 
+            //Loopar igenom strängen och ökar capitals värde med 1 för varje versal som hittas
             for (int i = 0; i < text.Length; i++)
             {
                 if (Char.IsUpper(text[i]))
