@@ -17,10 +17,10 @@ namespace UppercaseLetters
         protected void Submit_Click(object sender, EventArgs e)
         {
             //Kollar om knappen har texten "rensa" som endast tilldelas när en sträng har kollats
-            if (Submit.Text == "Rensa")
+            if (Input.Text == "")
             {
-                Input.Text = "";
                 Input.Enabled = true;
+                Input.Text = "";                
                 Result.Visible = false;
                 Submit.Text = "Bestäm antalet versaler";
             }
@@ -31,11 +31,11 @@ namespace UppercaseLetters
 
                 var capitals = Model.TextAnalyzer.GetNumberOfCapitals(input);
 
+                Submit.Text = "Rensa";
+
                 Input.Enabled = false;
 
-                Result.Text = "Texten innehåller " + capitals + " versaler";
-
-                Submit.Text = "Rensa";
+                Result.Text = "Texten innehåller " + capitals + " versaler";                
 
                 Result.Visible = true;
             }                       
