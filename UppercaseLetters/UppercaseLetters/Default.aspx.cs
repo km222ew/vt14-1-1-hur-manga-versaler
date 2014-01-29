@@ -16,7 +16,7 @@ namespace UppercaseLetters
 
         protected void Submit_Click(object sender, EventArgs e)
         {
-            //Kollar om knappen har texten "rensa" som endast tilldelas när en sträng har kollats
+            //Om textfältet är tomt återställs det
             if (Input.Text == "")
             {
                 Input.Enabled = true;
